@@ -1,0 +1,5 @@
+foreach(example drop throw)
+  add_executable(pm_${example} ${example}.cpp)
+  target_link_libraries(pm_${example} PRIVATE ballistics-pointmass)
+  set_target_properties(pm_${example} PROPERTIES OUTPUT_NAME ${example})
+endforeach()
